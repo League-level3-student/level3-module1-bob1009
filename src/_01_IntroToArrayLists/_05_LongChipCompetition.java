@@ -13,11 +13,27 @@ public class _05_LongChipCompetition {
 	 * initialize The Beatles before you start your search. *
 	 **/
 	private ArrayList<Beatle> theBeatles = new ArrayList<Beatle>();
-
+	double longestfry=0;
+	String beatlewith;
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
+		lcc.initializeBeatles();
+		for (int i = 0; i < lcc.theBeatles.size(); i++) {
+			Beatle find=lcc.theBeatles.get(i);
 		
-	}
+			ArrayList<Chip> digthroughfries=find.getChips(); 
+			for (int j = 0; j <digthroughfries.size(); j++) {
+				if (digthroughfries.get(j).getLength()>lcc.longestfry) {
+					lcc.longestfry=digthroughfries.get(j).getLength();
+					lcc.beatlewith=find.getName();}
+			}
+			
+		}
+		JOptionPane.showMessageDialog(null, ""+lcc.beatlewith+" has the longest fry");
+				}
+		
+
+	
 	
 	private void initializeBeatles() {
 		Beatle george = new Beatle("George");
