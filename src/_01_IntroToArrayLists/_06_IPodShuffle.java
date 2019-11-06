@@ -43,7 +43,7 @@ public class _06_IPodShuffle implements ActionListener{
 				playSong.add(sand);
 				playSong.add(no);
 				playSong.add(quake);
-				frame.setDefaultCloseOperation(EXIT);
+				
 				
 	}
 	
